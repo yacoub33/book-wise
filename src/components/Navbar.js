@@ -17,12 +17,16 @@ const Navbar = () => {
         </h1>
 
         <ul className="hidden md:flex items-center">
-          <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
-            Home
-          </li>
-          <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
-            Books
-          </li>
+          <a href="/">
+            <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
+              Home
+            </li>
+          </a>
+          <a href="/books">
+            <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
+              Books
+            </li>
+          </a>
           <BsFillCartFill
             size={20}
             className="mr-4  hover:text-purple-600 hover:cursor-pointer"
@@ -45,8 +49,12 @@ const Navbar = () => {
             : "absolute bg-gradient-to-t from-purple-100 to-gray-200 w-full border-t-2 h-screen px-8 py-8 text-center"
         }
       >
-        <li className="w-full mb-8 text-3xl uppercase font-bold ">Home</li>
-        <li className="w-full mb-8 text-3xl uppercase font-bold ">Books</li>
+        <a href="/">
+          <li className="w-full mb-8 text-3xl uppercase font-bold ">Home</li>
+        </a>
+        <a href="/books">
+          <li className="w-full mb-8 text-3xl uppercase font-bold ">Books</li>
+        </a>
         <li className="w-full mb-8 text-3xl uppercase font-bold ">Cart</li>
       </ul>
     </div>
