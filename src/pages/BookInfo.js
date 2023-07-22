@@ -36,19 +36,10 @@ const BookInfo = ({ books }) => {
               <AiFillStar />
               <AiFillStar />
             </div>
-            <div className="py-2">£{book.originalPrice}</div>
+            <div className="py-2">£{book.originalPrice.toFixed(2)}</div>
             <div className="max-w-[350px] py-4">
               <h2 className=" text-xl font-semibold">Summary</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum malesuada laoreet purus ac elementum. Nullam eleifend
-                urna sed quam eleifend, at consectetur turpis feugiat. Cras eu
-                leo eget lacus tempus tincidunt. Praesent venenatis consectetur
-                libero, ac eleifend purus iaculis non. Vestibulum ante ipsum
-                primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Integer sit amet est vitae quam sagittis varius a ac
-                quam. Ut aliquet aliquam
-              </p>
+              <p>{book.summary}</p>
             </div>
           </div>
         </div>
