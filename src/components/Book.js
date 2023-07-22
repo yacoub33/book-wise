@@ -1,11 +1,12 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BsStarHalf } from "react-icons/bs";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Book = ({ book }) => {
   return (
     <div className="px-10 py-4 ">
-      <a href="/">
+      <Link to={`/books/${book.id}`}>
         <figure>
           <img
             className="h-[150px] md:h-[250px]"
@@ -32,7 +33,7 @@ const Book = ({ book }) => {
             <span className="">£{book.originalPrice}.00</span>
           )}
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
