@@ -9,7 +9,7 @@ const Hero = () => {
       className="w-full h-[100vh] bg-gradient-to-r from-purple-100 via-gray-200 to-purple-200 flex justify-center items-center"
     >
       <div className="max-w-[1200px]">
-        <h1 className="font-bold text-3xl text-center mb-5">
+        <h1 className="font-bold text-3xl text-center mb-5 mt-20">
           UK's most awarded online library platform
         </h1>
         <p className="font-bold text-2xl text-center mb-5">
@@ -21,7 +21,7 @@ const Hero = () => {
             Browse Books
           </button>
         </div>
-        <img src={heroimg} className="mx-auto h-[300px] m-10" />
+        <img src={heroimg} className="mx-auto h-[250px] m-10" alt="/" />
       </div>
     </div>
   );
