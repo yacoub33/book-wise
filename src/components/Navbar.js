@@ -21,9 +21,6 @@ const Navbar = () => {
             Home
           </li>
           <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
-            About
-          </li>
-          <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
             Books
           </li>
           <BsFillCartFill
@@ -49,7 +46,6 @@ const Navbar = () => {
         }
       >
         <li className="w-full mb-8 text-3xl uppercase font-bold ">Home</li>
-        <li className="w-full mb-8 text-3xl uppercase font-bold ">About</li>
         <li className="w-full mb-8 text-3xl uppercase font-bold ">Books</li>
         <li className="w-full mb-8 text-3xl uppercase font-bold ">Cart</li>
       </ul>
