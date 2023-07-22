@@ -21,7 +21,7 @@ const BookInfo = ({ books }) => {
           <div>
             <figure>
               <img
-                className="w-[300px] md:w-[350px]"
+                className="w-[300px] md:w-[350px] rounded-sm"
                 src={book.url}
                 alt={book.title}
               />

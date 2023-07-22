@@ -9,7 +9,7 @@ const Book = ({ book }) => {
       <Link to={`/books/${book.id}`}>
         <figure>
           <img
-            className="h-[150px] md:h-[250px]"
+            className="h-[150px] md:h-[250px] rounded-sm"
             src={book.url}
             alt={book.title}
           />
