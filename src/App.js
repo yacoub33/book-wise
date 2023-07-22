@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -8,17 +8,13 @@ import BookInfo from "./pages/BookInfo";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/books" element={<Books books={books} />} />
-          <Route path="/books/1" element={<BookInfo books={books} />} />
-        </Routes>
-      </BrowserRouter>
+      <Route path="/" exact component={Home} />
+      <Route path="/books" render={() => <Books books={books} />} />
+      <Route path="/books/1" element={<BookInfo books={books} />} />
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

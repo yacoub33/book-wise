@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GiBookmarklet } from "react-icons/gi";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -15,18 +16,17 @@ const Navbar = () => {
           <GiBookmarklet size={35} className="mr-2" /> Book
           <span className="text-purple-600">Wise</span>
         </h1>
-
         <ul className="hidden md:flex items-center">
-          <a href="/">
+          <Link to="/">
             <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
               Home
             </li>
-          </a>
-          <a href="/books">
+          </Link>
+          <Link to="/books">
             <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
               Books
             </li>
-          </a>
+          </Link>
           <BsFillCartFill
             size={20}
             className="mr-4  hover:text-purple-600 hover:cursor-pointer"
@@ -49,13 +49,28 @@ const Navbar = () => {
             : "absolute bg-gradient-to-t from-purple-100 to-gray-200 w-full border-t-2 h-screen px-8 py-8 text-center"
         }
       >
-        <a href="/">
-          <li className="w-full mb-8 text-3xl uppercase font-bold ">Home</li>
-        </a>
-        <a href="/books">
-          <li className="w-full mb-8 text-3xl uppercase font-bold ">Books</li>
-        </a>
-        <li className="w-full mb-8 text-3xl uppercase font-bold ">Cart</li>
+        <Link to="/">
+          <li
+            onClick={handleClose}
+            className="w-full mb-8 text-3xl uppercase font-bold "
+          >
+            Home
+          </li>
+        </Link>
+        <Link to="/books">
+          <li
+            onClick={handleClose}
+            className="w-full mb-8 text-3xl uppercase font-bold "
+          >
+            Books
+          </li>
+        </Link>
+        <li
+          onClick={handleClose}
+          className="w-full mb-8 text-3xl uppercase font-bold "
+        >
+          Cart
+        </li>
       </ul>
     </div>
   );
