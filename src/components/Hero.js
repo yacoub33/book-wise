@@ -1,6 +1,7 @@
 import React from "react";
 import heroimg from "../assets/Undraw_Books.svg";
 import wave from "../assets/wave.svg";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Hero = () => {
   return (
@@ -17,9 +18,11 @@ const Hero = () => {
           <span className="text-purple-600">Wise</span>
         </p>
         <div className="flex justify-center">
-          <button className="px-4 py-2 text-white bg-purple-600 rounded-md">
-            Browse Books
-          </button>
+          <Link to="/books">
+            <button className="px-4 py-2 text-white bg-purple-600 rounded-md">
+              Browse Books
+            </button>
+          </Link>
         </div>
         <img src={heroimg} className="mx-auto h-[250px] m-10" alt="/" />
       </div>

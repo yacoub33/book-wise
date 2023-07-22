@@ -12,10 +12,12 @@ const Navbar = () => {
   return (
     <div className="w-screen h-[80px] z-10 bg-zinc-100 fixed drop-shadow-lg">
       <div className="px-2 flex justify-between items-center h-full">
-        <h1 className="flex items-center text-3xl font-bold">
-          <GiBookmarklet size={35} className="mr-2" /> Book
-          <span className="text-purple-600">Wise</span>
-        </h1>
+        <Link to="/">
+          <h1 className="flex items-center text-3xl font-bold">
+            <GiBookmarklet size={35} className="mr-2" /> Book
+            <span className="text-purple-600">Wise</span>
+          </h1>
+        </Link>
         <ul className="hidden md:flex items-center">
           <Link to="/">
             <li className="mr-4 font-semibold hover:text-purple-600 hover:cursor-pointer">
