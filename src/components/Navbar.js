@@ -29,10 +29,12 @@ const Navbar = () => {
               Books
             </li>
           </Link>
-          <BsFillCartFill
-            size={20}
-            className="mr-4  hover:text-purple-600 hover:cursor-pointer"
-          />
+          <Link to="/cart">
+            <BsFillCartFill
+              size={20}
+              className="mr-4  hover:text-purple-600 hover:cursor-pointer"
+            />
+          </Link>
         </ul>
 
         <div className="md:hidden mr-4" onClick={handleClick}>
@@ -67,12 +69,14 @@ const Navbar = () => {
             Books
           </li>
         </Link>
-        <li
-          onClick={handleClose}
-          className="w-full mb-8 text-3xl uppercase font-bold "
-        >
-          Cart
-        </li>
+        <Link to="/cart">
+          <li
+            onClick={handleClose}
+            className="w-full mb-8 text-3xl uppercase font-bold "
+          >
+            Cart
+          </li>
+        </Link>
       </ul>
     </div>
   );

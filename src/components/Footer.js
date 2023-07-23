@@ -1,5 +1,6 @@
 import React from "react";
 import { GiBookmarklet } from "react-icons/gi";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Footer = () => {
   return (
@@ -10,10 +11,18 @@ const Footer = () => {
         </h1>
       </div>
       <div className="flex text-white p-10 justify-center">
-        <a className="mr-5">Home</a>
-        <a className="mr-5">About</a>
-        <a className="mr-5">Books</a>
-        <a className="">Cart</a>
+        <Link to="/" className="mr-5">
+          Home
+        </Link>
+        <Link to="/" className="mr-5">
+          About
+        </Link>
+        <Link to="/books" className="mr-5">
+          Books
+        </Link>
+        <Link to="/cart" className="">
+          Cart
+        </Link>
       </div>
       <div className="flex justify-center pb-2">
         <p className="text-sm text-white/50">Copyright &copy; 2023 BookWise</p>
