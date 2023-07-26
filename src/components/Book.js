@@ -1,7 +1,7 @@
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
-import { BsStarHalf } from "react-icons/bs";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import Price from "./Price";
+import Rating from "./Rating";
 
 const Book = ({ book }) => {
   return (
@@ -15,23 +15,9 @@ const Book = ({ book }) => {
           />
         </figure>
         <div className="max-w-[150px]">{book.title}</div>
-        <div className="flex text-yellow-500">
-          {new Array(Math.floor(book.rating)).fill(0).map((_, index) => (
-            <AiFillStar key={index} />
-          ))}
-          {!Number.isInteger(book.rating) && <BsStarHalf />}
-        </div>
+        <Rating book={book} />
         <div>
-          {book.salePrice ? (
-            <>
-              <span className="mr-2">£{book.salePrice.toFixed(2)}</span>
-              <span className="text-gray-400 line-through text-sm">
-                £{book.originalPrice.toFixed(2)}
-              </span>
-            </>
-          ) : (
-            <span className="">£{book.originalPrice}.00</span>
-          )}
+          <Price book={book} />
         </div>
       </Link>
     </div>

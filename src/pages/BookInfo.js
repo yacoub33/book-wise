@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { AiFillStar } from "react-icons/ai";
 import { BsStarHalf } from "react-icons/bs";
 import Book from "../components/Book";
+import Price from "../components/Price";
+import Rating from "../components/Rating";
 
 const BookInfo = ({ books }) => {
   const { id } = useParams();
@@ -30,25 +32,9 @@ const BookInfo = ({ books }) => {
           </div>
           <div>
             <h2 className="text-2xl font-bold py-4">{book.title}</h2>
-            <div className="flex text-yellow-400 mt-2">
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-            </div>
+            <Rating book={book} />
             <div className="py-2">
-              {" "}
-              {book.salePrice ? (
-                <>
-                  <span className="mr-2">£{book.salePrice.toFixed(2)}</span>
-                  <span className="text-gray-400 line-through text-sm">
-                    £{book.originalPrice.toFixed(2)}
-                  </span>
-                </>
-              ) : (
-                <span className="">£{book.originalPrice}.00</span>
-              )}
+              <Price book={book} />
             </div>
             <div className="max-w-[350px] py-4">
               <h2 className=" text-xl font-semibold">Summary</h2>
